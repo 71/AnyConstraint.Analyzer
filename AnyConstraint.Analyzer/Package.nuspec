@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>AnyConstraint.Analyzer</id>
+    <version>1.0.0</version>
+    <authors>Gregoire Geis</authors>
+    <copyright>Copyright 2017 (c) Gregoire Geis</copyright>
+
+    <licenseUrl>http://github.com/6A/AnyConstraint.Analyzer/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>http://github.com/6A/AnyConstraint.Analyzer</projectUrl>
+
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <releaseNotes>Updated release</releaseNotes>
+    <description>Analyzer that suppresses the CS0702 error, thus allowing any constraint to be used (including 'Delegate' and 'Enum').</description>
+
+    <tags>analyzer;constraint;delegate;enum</tags>
+	<developmentDependency>true</developmentDependency>
+  </metadata>
+
+  <files>
+    <file src="bin\Release\AnyConstraint.Analyzer.dll" target="analyzers\dotnet\cs" />
+    <file src="bin\Release\Tools\*.ps1" target="tools" />
+  </files>
+</package>
