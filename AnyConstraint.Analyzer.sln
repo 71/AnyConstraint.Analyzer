@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnyConstraint.Analyzer", "AnyConstraint.Analyzer\AnyConstraint.Analyzer.csproj", "{009817ED-3851-4ADB-BB07-85529F5E4A49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnyConstraint.Tests", "AnyConstraint.Tests\AnyConstraint.Tests.csproj", "{6B32C450-D24D-43EC-B107-DC2A94E77DA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{009817ED-3851-4ADB-BB07-85529F5E4A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{009817ED-3851-4ADB-BB07-85529F5E4A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{009817ED-3851-4ADB-BB07-85529F5E4A49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B32C450-D24D-43EC-B107-DC2A94E77DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B32C450-D24D-43EC-B107-DC2A94E77DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B32C450-D24D-43EC-B107-DC2A94E77DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B32C450-D24D-43EC-B107-DC2A94E77DA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
