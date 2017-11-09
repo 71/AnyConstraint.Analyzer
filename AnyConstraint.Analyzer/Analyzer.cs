@@ -39,8 +39,9 @@ namespace AnyConstraint.Analyzer
                     if (hasReported)
                         return;
 
-                    hasReported = true;
                     ctx.ReportDiagnostic(Diagnostic.Create(Error, Location.None, e.Message));
+
+                    hasReported = true;
                 });
             }
         }

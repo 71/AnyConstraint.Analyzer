@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -18,6 +20,8 @@ namespace AnyConstraint.Analyzer
         /// <summary>
         ///   Returns <see langword="true"/>, no matter the input.
         /// </summary>
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        [SuppressMessage("ReSharper", "UnusedParameter.Local")]
         private static bool IsValidConstraintType(TypeConstraintSyntax syntax, ITypeSymbol type, object diagnostics) => true;
 
         /// <summary>
@@ -37,10 +41,11 @@ namespace AnyConstraint.Analyzer
                 .GetTypeInfo().DeclaredMethods.First(x => x.Name == nameof(IsValidConstraintType));
 
             // Ensure the methods are jitted
+            IsValidConstraintType(null, null, null);
+
             try
             {
                 original.Invoke(null, new object[] { null, null, null });
-                replacement.Invoke(null, new object[] { null, null, null });
             }
             catch
             {

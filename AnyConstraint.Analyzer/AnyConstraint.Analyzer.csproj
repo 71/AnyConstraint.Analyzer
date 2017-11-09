@@ -5,10 +5,13 @@
 
     <!-- Signing -->
     <SignAssembly>True</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">True</PublicSign>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
 
     <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>False</AppendRuntimeIdentifierToOutputPath>
+
+    <NuspecFile>Package.nuspec</NuspecFile>
   </PropertyGroup>
 
   <ItemGroup>
